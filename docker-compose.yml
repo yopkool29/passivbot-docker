@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        PB6_VERSION: v6.1.4b                                                         # Set the version of PB6
+        PB6_VERSION: v6.1.4                                                          # Set the version of PB6
         PB7_VERSION: master                                                          # Set the version of PB7. Default is latest commit on main line
         PBGUI_VERSION: main                                                           # Set the version of PBGUI. Default is latest commit on main line
     ports:
