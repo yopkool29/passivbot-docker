@@ -66,6 +66,12 @@ This Docker image provides a streamlined environment for running the Passivbot t
     ### Windows
 
     Simply run the setup.bat file located in the tools folder:
+    ```bash
+      # Bug fix
+      # Convertit CRLF -> LF et garde l’encodage UTF-8
+      (Get-Content base/src/entrypoint.sh -Raw) -replace "`r`n", "`n" |
+          Set-Content base/src/entrypoint.sh -NoNewline -Encoding UTF8
+      ```
 
     ```bash
     tools\setup.bat
